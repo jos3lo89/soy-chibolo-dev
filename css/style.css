@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+/* estilos generales START */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s linear;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-size: 62.5%; /*1rem = 10px*/
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-claro: #f2f7f5;
+    --txt-color: #00473e;
+    --boton-color: #faae2b;
+    --span-color: #fa5246;
+}
+
+body {
+    background-color: var(--bg-claro);
+}
+
+/* estilos generales END */
+
+/* header START */
+.header {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .logo {
+    font-size: 3rem;
+    color: var(--txt-color);
+    text-transform: capitalize;
+}
+
+.header .logo span {
+    color: var(--span-color);
+}
+
+.header .navBar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header .navBar a {
+    color: var(--txt-color);
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.header .btns {
+    display: none;
+}
+
+.header .btns .menuBtn {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header .btns .menuBtn i {
+    font-size: 3rem;
+    color: var(--txt-color);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header .btns {
+        display: inline;
+    }
+
+    .header .navBar {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        padding: 1rem 0 1rem 1rem;
+        border-bottom: 2px solid var(--span-color);        
+        border-top: 2px solid var(--span-color);  
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: var(--bg-claro);     
+    }
+
+    .header .navBar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    #menu-btn.bx-x {
+        transform: rotate(180deg);
+    }
+}
+/* header END */
+
+/* main page START */
+.mainPage {
+    /* background-color: #55b5a8; */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 7rem;
+    display: flex;
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+    .mainPage {
+        flex-direction: column;
+    }
+}
+
+/* .mainPage .datosMainPage {
+    background-color: #fa5246;
+} */
+
+.mainPage .datosMainPage h2 {
+    color: var(--txt-color);
+    font-size: 4rem;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.mainPage .datosMainPage h2 span {
+    color: var(--txt-color);
+    font-size: 2rem;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.mainPage .datosMainPage h3 {
+    color: var(--boton-color);
+    font-size: 3rem;
+    text-transform: capitalize;
+    cursor: default;
+    font-weight: 400;
+}
+
+.mainPage .datosMainPage p {
+    color: var(--txt-color);
+    font-size: 1.6rem;
+    text-transform: lowercase;
+    cursor: default;
+    font-weight: 200;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.mainPage .datosMainPage a {
+    color: var(--txt-color);
+    font-size: 1.6rem;
+    background-color: var(--bg-claro);
+    padding: 1rem;
+    border: 2px solid var(--txt-color);
+}
+
+.mainPage .datosMainPage a span {
+    color: #fa5246;
+    text-transform: uppercase;
+}
+
+.mainPage .datosMainPage a:hover {
+    background-color: var(--boton-color);
+}
+
+.mainPage .photoMainPage {
+    width: 100%;
+    height: auto;
+}
+
+.mainPage .photoMainPage .slidesBox {
+    width: 100%;
+    height: 100%;
+}
+
+.mainPage .photoMainPage .slidesBox .slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainPage .photoMainPage .slidesBox .slides img {
+    width: auto;
+    height: 300px;
+}
+/* main page END */
