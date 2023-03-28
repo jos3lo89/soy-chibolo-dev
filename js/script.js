@@ -20,9 +20,13 @@ document.addEventListener("click", (event) => {
 // swiperMainPage START
 var swiper = new Swiper(".photoMainPage", {
     loop: true,
-    loop: true,
     keyboard: {
         enabled: true,
+    },
+    autoplay: {
+        delay: 5000, //auto-play cada 5 sec
+        pauseOnMouseEnter: true, //pasa maus y pausa slides
+        disableOnInteraction: false, //vuelva a lo mismo
     },
 });
 // swiperMainPage END
