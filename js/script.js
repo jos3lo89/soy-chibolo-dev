@@ -20,5 +20,9 @@ document.addEventListener("click", (event) => {
 // swiperMainPage START
 var swiper = new Swiper(".photoMainPage", {
     loop: true,
+    loop: true,
+    keyboard: {
+        enabled: true,
+    },
 });
 // swiperMainPage END
