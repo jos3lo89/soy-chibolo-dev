@@ -30,3 +30,11 @@ var swiper = new Swiper(".photoMainPage", {
     },
 });
 // swiperMainPage END
+
+// modo osucro START
+let btnNight = document.querySelector("#BtnNight");
+btnNight.addEventListener("click", () => {
+    document.documentElement.classList.toggle("night-mode");
+    btnNight.classList.toggle("bxs-moon");
+});
+// modo osucro END

@@ -14,7 +14,8 @@
 }
 
 html {
-    font-size: 62.5%; /*1rem = 10px*/
+    font-size: 62.5%;
+    /*1rem = 10px*/
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -24,6 +25,15 @@ html {
     --txt-color: #00473e;
     --boton-color: #faae2b;
     --span-color: #fa5246;
+    --bg-light: #fff;
+}
+
+.night-mode {
+    --bg-claro: #232946;
+    --txt-color: #fffffe;
+    --boton-color: #eebbc3;
+    --span-color: #b8c1ec;
+    --bg-light: #0f0e17;
 }
 
 body {
@@ -40,7 +50,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 5rem;
-
+    background-color: var(--bg-claro);
     position: fixed;
     top: 0;
     left: 0;
@@ -69,12 +79,35 @@ body {
     text-transform: capitalize;
 }
 
+.header .navBar a:hover {
+    color: var(--boton-color);
+}
+
 .header .btns {
-    display: none;
+    /* background-color: #fa5246; */
+    display: flex;
+    gap: 1rem;
+}
+
+.header .btns .nightBtn {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header .btns .nightBtn i {
+    color: #faae2b;
+    font-size: 2.6rem;
+    cursor: pointer;
+}
+
+#BtnNight.bxs-moon {
+    transform: rotate(360deg);
+    color: #b8c1ec;
 }
 
 .header .btns .menuBtn {
     width: 3rem;
+    display: none;
     height: 3rem;
 }
 
@@ -85,7 +118,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .header .btns {
+    .header .btns .menuBtn {
         display: inline;
     }
 
@@ -97,10 +130,10 @@ body {
         left: 0;
         right: 0;
         padding: 1rem 0 1rem 1rem;
-        border-bottom: 2px solid var(--span-color);        
-        border-top: 2px solid var(--span-color);  
+        border-bottom: 2px solid var(--span-color);
+        border-top: 2px solid var(--span-color);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        background-color: var(--bg-claro);     
+        background-color: var(--bg-claro);
     }
 
     .header .navBar.active {
@@ -111,14 +144,14 @@ body {
         transform: rotate(180deg);
     }
 }
+
 /* header END */
 
 /* main page START */
 .mainPage {
-    /* background-color: #55b5a8; */
     max-width: 1000px;
     margin: 0 auto;
-    padding-top: 7rem;
+    padding-top: 10rem;
     display: flex;
     gap: 2rem;
     padding-left: 2rem;
@@ -128,12 +161,9 @@ body {
 @media (max-width: 768px) {
     .mainPage {
         flex-direction: column;
+        margin-top: 0;
     }
 }
-
-/* .mainPage .datosMainPage {
-    background-color: #fa5246;
-} */
 
 .mainPage .datosMainPage h2 {
     color: var(--txt-color);
@@ -206,4 +236,96 @@ body {
     width: auto;
     height: 300px;
 }
+
 /* main page END */
+
+/* proyectos START */
+.proyectos {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.proyectos .proyectosTitle {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.proyectos .proyectosTitle p {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--txt-color);
+}
+
+.pryectosBox {
+    width: 100%;
+    height: auto;
+    display: grid;
+    padding: 0px 30px 0px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 340px;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.pryectosBox .itemProyect {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pryectosBox .itemProyect .imgBox {
+    width: 250px;
+    height: 160px;
+}
+
+.pryectosBox .itemProyect img {
+    width: 100%;
+    height: 100%;
+}
+
+.pryectosBox .itemProyect h3 {
+    color: var(--boton-color);
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.pryectosBox .itemProyect p {
+    display: block;
+    color: var(--txt-color);
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    max-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .pryectosBox .itemProyect p {
+        max-width: 270px;
+    }
+}
+
+.pryectosBox .itemProyect a {
+    display: block;
+    /* background-color: var(--boton-color); */
+    color: var(--txt-color);
+    font-size: 1.5rem;
+    border: 2px solid var(--txt-color);
+    padding: .5rem;
+    margin: .5rem;
+    width: 7.5rem;
+    text-transform: capitalize;
+}
+
+.pryectosBox .itemProyect a:hover {
+    background-color: var(--boton-color);
+    color: var(--txt-color);
+    border-radius: 1rem;
+}
+
+/* proyectos END */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>joselo.dev</title>
+    <title>Chibolo.Dev</title>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- link del icono -->
@@ -13,18 +13,23 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- cdn font awesone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     
     <!-- header START -->
-    <header class="header">
+    <header class="header" id="header">
         <a href="#" class="logo">chibolo.<span>dev</span></a>
         <div class="navBar">
             <a href="#">inicio</a>
-            <a href="#">proyectos</a>
+            <a href="#proyectos">proyectos</a>
             <a href="#">sobre mi</a>
         </div>
         <div class="btns">
+            <div class="nightBtn">
+                <i id="BtnNight" class='bx bx-sun'></i>
+            </div>
             <div class="menuBtn">
                 <i id="menu-btn" class='bx bx-menu'></i>
             </div>
@@ -56,6 +61,56 @@
         </div>
     </section>
     <!-- main page END -->
+
+    <!-- proyectos START -->
+    <section class="proyectos" id="proyectos">
+        <div class="proyectosTitle">
+            <p>proyectos</p>
+        </div>
+        <div class="pryectosBox">
+            <div class="itemProyect">
+                <div class="imgBox">
+                    <img src="assets/proyecto1.svg" alt="#">
+                </div>
+                <h3>proyecto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusantium.</p>
+                <a href="#">ver más</a>
+            </div>
+            <div class="itemProyect">
+                <div class="imgBox">
+                    <img src="assets/proyecto2.svg" alt="#">
+                </div>
+                <h3>proyecto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusantium.</p>
+                <a href="#">ver más</a>
+            </div>
+            <div class="itemProyect">
+                <div class="imgBox">
+                    <img src="assets/proyecto3.svg" alt="#">
+                </div>
+                <h3>proyecto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusantium.</p>
+                <a href="#">ver más</a>
+            </div>
+            <div class="itemProyect">
+                <div class="imgBox">
+                    <img src="assets/proyecto4.svg" alt="#">
+                </div>
+                <h3>proyecto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusantium.</p>
+                <a href="#">ver más</a>
+            </div>
+            <div class="itemProyect">
+                <div class="imgBox">
+                    <img src="assets/proyecto5.svg" alt="#">
+                </div>
+                <h3>proyecto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusantium.</p>
+                <a href="#">ver más</a>
+            </div>
+        </div>
+    </section>
+    <!-- proyectos END -->
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
